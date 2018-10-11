@@ -11,6 +11,7 @@
 <body>
     <h5>Choose your birth month!</h5>
     <select id = "monthChoice">
+        <option>---</option>
         <option>January</option>
         <option>February</option>
         <option>March</option>
@@ -26,6 +27,7 @@
     </select>
     <h5>Choose your birth day!</h5>
     <select id = "dayChoice">
+        <option>---</option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -62,5 +64,9 @@
     <div></div>
     <br>
     <button id="submit" onclick="onSubmit()">submit</button>
+    <br>
+    <div></div>
+    <br>
+    <p id="afterSubmit"></p>
 </body>
 </html>
