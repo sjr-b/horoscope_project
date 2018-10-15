@@ -1,74 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
 <!-- This is the horoscope project, check classroom for the instructions! -->
-<!-- To do: BCE -->
+<!-- To do:
+- Lay elements out in a table or space using position:relative in css.
+- On submit, the program returns an image and a message to the user
+- Dynamically update <image src=””> attribute using JavaScript DOM.
+- The program must be able to be “played again” without a page reload or error
+-->
 <head>
-    <meta charset="UTF-8">
+    <meta charset ="UTF-8">
     <title>Horoscope Project</title>
     <script src = "script.js"></script>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <h5>Choose your birth month!</h5>
-    <select id = "monthChoice">
-        <option>---</option>
-        <option value="0">January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-    </select>
-    <h5>Choose your birth day!</h5>
-    <select id = "dayChoice">
-        <option>---</option>
-        <option value="1">1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-        <option>16</option>
-        <option>17</option>
-        <option>18</option>
-        <option>19</option>
-        <option>20</option>
-        <option>21</option>
-        <option>22</option>
-        <option>23</option>
-        <option>24</option>
-        <option>25</option>
-        <option>26</option>
-        <option>27</option>
-        <option>28</option>
-        <option>29</option>
-        <option>30</option>
-        <option>31</option>
-    </select>
-    <br>
-    <div></div>
-    <br>
-    <button id="submit" onclick="onSubmit()">submit</button>
-    <br>
-    <br>
-    <p id="signReveal"></p>
-    <br>
-    <br>
-    <p id="horoscopeReveal"></p>
+<h1>Find Out Your Horoscope!</h1>
+What's your name?
+<input type="text" id="name" value = "" size="25">
+<br>
+Choose your birth month!
+<select id = "monthChoice">
+    <option value = "noChoice">---</option>
+    <option value = "0">January</option>
+    <option value = "1">February</option>
+    <option value = "2">March</option>
+    <option value = "3">April</option>
+    <option value = "4">May</option>
+    <option value = "5">June</option>
+    <option value = "6">July</option>
+    <option value = "7">August</option>
+    <option value = "8">September</option>
+    <option value = "9">October</option>
+    <option value = "10">November</option>
+    <option value = "11">December</option>
+</select>
+<br>
+Choose your birth day!
+<select id = "dayChoice">
+    <option value = "noChoice">---</option>
+    <option value = "1">1</option>
+    <option value = "2">2</option>
+    <option value = "3">3</option>
+    <option value = "4">4</option>
+    <option value = "5">5</option>
+    <option value = "6">6</option>
+    <option value = "7">7</option>
+    <option value = "8">8</option>
+    <option value = "9">9</option>
+    <option value = "10">10</option>
+    <option value = "11">11</option>
+    <option value = "12">12</option>
+    <option value = "13">13</option>
+    <option value = "14">14</option>
+    <option value = "15">15</option>
+    <option value = "16">16</option>
+    <option value = "17">17</option>
+    <option value = "18">18</option>
+    <option value = "19">19</option>
+    <option value = "20">20</option>
+    <option value = "21">21</option>
+    <option value = "22">22</option>
+    <option value = "23">23</option>
+    <option value = "24">24</option>
+    <option value = "25">25</option>
+    <option value = "26">26</option>
+    <option value = "27">27</option>
+    <option value = "28">28</option>
+    <option value = "29">29</option>
+    <option value = "30">30</option>
+    <option value = "31">31</option>
+</select>
+<br>
+Is today your birthday? <select id = "birthdayCheck">
+    <option value = "noChoice">---</option>
+    <option value = "yes">yes</option>
+    <option value = "no">no</option>
+</select>
+<br>
+<button id ="submit" onclick="onSubmit()">submit</button>
+<br>
+<h3>Your Sign</h3>
+<p id = "signReveal" class = "info"></p>
+<br>
+<h3>Your Horoscope</h3>
+<p id ="horoscopeReveal" class = "info"></p>
 </body>
 </html>

@@ -1,0 +1,26 @@
+body {
+    background: ivory;
+    position: relative;
+    font-family: "Times New Roman";
+    font-size: small;
+}
+
+h1 {
+    color: darkred;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow:  0 0 10px crimson;
+}
+
+h3 {
+    color: darkred;
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow:  0 0 10px crimson;
+}
+
+.info {
+    font-size: medium;
+}
