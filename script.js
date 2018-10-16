@@ -4,8 +4,8 @@ var images = ["http://www.horoscope.com/images-US/signs/profile-aquarius.png", "
 
 // Grab the user's entered variables, call other methods to use that data, and then update page with new data.
 function onSubmit(){
-    var userSign = "We're sorry! Something went wrong, can you please check the dates you inputted? Thank you very much";
-    var name = document.getElementById("name").value;
+    var userSign = "";
+    var name = document.getElementById("nameInput").value;
     var day = document.getElementById("dayChoice").value;
     var month = document.getElementById("monthChoice").value;
     determineSign(day, month);
@@ -15,9 +15,10 @@ function onSubmit(){
     document.getElementById("horoscopeReveal").innerHTML = determineHoroscope();
 }
 
-// Given the user's birthday, return their sign as a number (use it as a [key] into your Signs array).3
+// Determines the sign of the user based on the month and day they proviuded
 function determineSign(day, month){
-    if (month == "noChoice" || day == "noChoice"){
+    var name = document.getElementById("nameInput").value;
+    if (name == "" || month == "noChoice" || day == "noChoice"){
         alert("Oops! You didn't fill everything out. Could you please do so now? Thank you!");
     }
     if (month == "1" && day >= "29" || month == "3" && day == "31" || month == "5" && day == "31" || month == "8" && day == "31" || month == "10" && day == "31"){
@@ -63,7 +64,7 @@ function determineSign(day, month){
     return userSign;
 }
 
-// Given a user’s sign, return the horoscope text
+// Given a user’s sign, this function returns their horoscope.
 function determineHoroscope(userSign){
     var birthdayResult = document.getElementById("birthdayCheck").value;
     var userHoroscope = "";
