@@ -24,3 +24,8 @@ h3 {
 .info {
     font-size: medium;
 }
+
+#secretMessage{
+    font-size: xx-small;
+    color: peachpuff;
+}

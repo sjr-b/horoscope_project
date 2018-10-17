@@ -3,9 +3,8 @@
 <!-- This is the horoscope project, check classroom for the instructions! -->
 <!-- To do:
 - Lay elements out in a table or space using position:relative in css.
-- On submit, the program returns an image and a message to the user
-- Dynamically update <image src=””> attribute using JavaScript DOM.
-- The program must be able to be “played again” without a page reload or error
+- Figure out error w/ Cathy, July, 4, no
+- change month values so its easier
 -->
 <head>
     <meta charset ="UTF-8">
@@ -76,14 +75,17 @@ Is today your birthday? <select id = "birthdayCheck">
     <option value = "yes">yes</option>
     <option value = "no">no</option>
 </select>
-<br>
+<p id = "break control"</p>
 <button id ="submit" onclick="onSubmit()">submit</button>
 <br>
 <h3>Your Sign</h3>
 <p id = "signReveal" class = "info"></p>
-<image src = "https://user-images.githubusercontent.com/6753949/41509588-16212fda-721c-11e8-8650-dc1cdd619072.png" id = "imageTBR">
 <br>
 <h3>Your Horoscope</h3>
 <p id ="horoscopeReveal" class = "info"></p>
+<br>
+<h3>Your Sign Symbol</h3>
+<image src = "https://user-images.githubusercontent.com/6753949/41509588-16212fda-721c-11e8-8650-dc1cdd619072.png" id = "imageReveal" width = 300 px></image>
+<p id = "secretMessage">Congratulations, you have found the secret message! I am very proud of you. - Sophie</p>
 </body>
 </html>
