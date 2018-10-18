@@ -1,11 +1,12 @@
 body {
     background-image: linear-gradient(to right, ivory, peachpuff);
-    position: relative;
     font-family: "Times New Roman";
     font-size: small;
 }
 
 h1 {
+    position: relative;
+    left: 10px;
     color: darkred;
     font-size: xx-large;
     font-style: italic;
@@ -14,6 +15,8 @@ h1 {
 }
 
 h3 {
+    position: relative;
+    left: 3px;
     color: darkred;
     font-size: x-large;
     font-style: italic;
@@ -22,10 +25,13 @@ h3 {
 }
 
 .info {
+    position: relative;
     font-size: medium;
 }
 
 #secretMessage{
-    font-size: xx-small;
+    position: relative;
+    left: 50px;
     color: peachpuff;
+    font-size: xx-small;
 }
