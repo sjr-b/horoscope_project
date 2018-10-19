@@ -10,27 +10,25 @@ function onSubmit(){
     var day = document.getElementById("dayChoice").value;
     var month = document.getElementById("monthChoice").value;
     determineSign(name, birthdayResult, day, month);
-    determineHoroscope(userSign, birthdayResult);
-    determineImage(userSign);
+    determineHoroscope(birthdayResult);
+    determineImage();
     if (determineSign() != null){
         document.getElementById("signReveal").innerHTML = "Hello, " + name + ", your sign is " + determineSign() + "!";
         document.getElementById("horoscopeReveal").innerHTML = determineHoroscope();
         document.getElementById("imageReveal").src = determineImage(userSign);
-
     }
 }
 
-// Determines the sign of the user based on the month and day they proviuded
+// Determines the sign of the user based on the month and day they provided
 function determineSign(name, birthdayResult, day, month){
-    if (name == "" || birthdayResult == "noChoice" ||  month == "noChoice" || day == "noChoice"){
+    if (name == "" || birthdayResult == "noChoice" || month == "noChoice" || day == "noChoice"){
         alert("Oops! You didn't fill everything out. Could you please do so now? Thank you!");
         return null;
     }
-    if (month == "feb" && day > "29" || month == "apr" && day == "31" || month == "jun" && day == "31" || month == "sep" && day == "31" || month == "nov" && day == "31"){
+    if (month == "feb" && day >= "29" || month == "3" && day == "31" || month == "may" && day == "31" || month == "sep" && day == "31" || month == "nov" && day == "31"){
         alert("We're sorry! Something went wrong. Could you please check to make sure the dates are correct? Thank you.");
         return null;
-    }
-    if (month == "dec" && "22" <= day || month == "jan" && day <= "19"){
+    } else if (month == "dec" && "22" <= day || month == "jan" && day <= "19"){
         userSign = signs[11];
         // Capricorn
     } else if (month == "jan" &&  "20" <= day || month == "feb" && day <= "18"){
@@ -71,12 +69,9 @@ function determineSign(name, birthdayResult, day, month){
 }
 
 // Given a user’s sign, this function returns their horoscope.
-function determineHoroscope(determineSign, birthdayResult){
+function determineHoroscope(birthdayResult){
     var userHoroscope = "";
-    if (birthdayResult == "yes"){
-        userHoroscope = "Happy birthday! Today will be a day to remember, with great company, fantastic food, and an abundance of embarrassing memories! Your next year will be exciting and chaotic, with ups and downs, but you will not regret it!";
-        return userHoroscope;
-    } else if (determineSign() == null){
+    if (determineSign() == null){
         return null;
     } else if (determineSign() == "Aquarius"){
         userHoroscope = messages[0];
@@ -102,14 +97,14 @@ function determineHoroscope(determineSign, birthdayResult){
         userHoroscope = messages[10];
     } else if (determineSign() == "Capricorn"){
         userHoroscope = messages[11];
-    } else {
-        userHoroscope = "unavailable";
+    } else if (birthdayResult == "yes"){
+        userHoroscope = "Happy birthday! Today will be a day to remember, with great company, fantastic food, and an abundance of embarrassing memories! Your next year will be exciting and chaotic, with ups and downs, but you will not regret it!";
     }
     return userHoroscope;
 }
 
 // Given a user’s sign, return the horoscope image.
-function determineImage(determineSign) {
+function determineImage() {
     var userImage = "";
     if (determineSign() == null) {
         return null;
