@@ -1,7 +1,11 @@
 body {
     background-image: linear-gradient(to right, ivory, peachpuff);
-    font-family: "Times New Roman";
+    background-size: auto;
+    border: 5px dashed crimson;
+    margin: 10px;
+    font-family: serif;
     font-size: small;
+    text-align: center;
 }
 
 h1 {
@@ -21,17 +25,34 @@ h3 {
     font-size: x-large;
     font-style: italic;
     font-weight: bold;
-    text-shadow:  0 0 7.5px crimson;
+    text-shadow: 0 0 7.5px crimson;
 }
 
 .info {
     position: relative;
+    left: 1px;
     font-size: medium;
 }
 
-#secretMessage{
+#secretMessage {
     position: relative;
-    left: 50px;
+    text-align: left;
     color: peachpuff;
     font-size: xx-small;
+}
+
+#secreterMessage {
+    position: relative;
+    text-align: right;
+    color: #ffdfb9;
+    font-size: xx-small;
+}
+
+#credits {
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    font-size: smaller;
+    font-style: italic;
+    color: darkred;
 }

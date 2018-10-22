@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang ="en">
-<!-- This is the horoscope project, check classroom for the instructions! -->
-<!-- To do:
-- Lay elements out in a table or space using position:relative in css.
--->
 <head>
     <meta charset ="UTF-8">
     <title>Horoscope Project</title>
@@ -11,13 +7,13 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-<h1>Find Out Your Horoscope!</h1>
+<h1>Discover Your Horoscope!</h1>
 What's your name?
 <input type="text" id="nameInput" value = "" size="25">
 <br>
 Choose your birth month!
 <select id = "monthChoice">
-    <option value = "noChoice">---</option>
+    <option value = "noChoice">   </option>
     <option value = "jan">January</option>
     <option value = "feb">February</option>
     <option value = "mar">March</option>
@@ -34,7 +30,7 @@ Choose your birth month!
 <br>
 Choose your birth day!
 <select id = "dayChoice">
-    <option value = "noChoice">---</option>
+    <option value = "noChoice">   </option>
     <option value = "1">1</option>
     <option value = "2">2</option>
     <option value = "3">3</option>
@@ -69,21 +65,21 @@ Choose your birth day!
 </select>
 <br>
 Is today your birthday? <select id = "birthdayCheck">
-    <option value = "noChoice">---</option>
+    <option value = "noChoice">   </option>
     <option value = "yes">yes</option>
     <option value = "no">no</option>
 </select>
 <br>
 <button id ="submit" onclick="onSubmit()">submit</button>
 <br>
-<h3>Your Sign</h3>
+<h3 id = "sign"></h3>
 <p id = "signReveal" class = "info"></p>
+<image src = "https://user-images.githubusercontent.com/6753949/41509588-16212fda-721c-11e8-8650-dc1cdd619072.png" id = "imageReveal" width = 290 px></image>
 <br>
-<h3>Your Horoscope</h3>
+<h3 id = "horoscope"></h3>
 <p id ="horoscopeReveal" class = "info"></p>
-<br>
-<h3>Your Sign Symbol</h3>
-<image src = "https://user-images.githubusercontent.com/6753949/41509588-16212fda-721c-11e8-8650-dc1cdd619072.png" id = "imageReveal" width = 300 px></image>
-<p id = "secretMessage">Congratulations, you have found the secret message! I am very proud of you. - Sophie</p>
+<span id = "secretMessage">Congratulations, you have found the secret message! I am very proud of you. - Sophie</span>
+<span id = "secreterMessage">jajaja, lo siento. no estoy orgullosa de ti; es facilisimo</span>
+<span id = "credits">Created by Sophie Rodriguez-Bell</span>
 </body>
 </html>
