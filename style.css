@@ -1,3 +1,7 @@
+:not(#credits){
+    position: relative;
+}
+
 body {
     background-image: linear-gradient(to right, ivory, peachpuff);
     background-size: auto;
@@ -9,7 +13,6 @@ body {
 }
 
 h1 {
-    position: relative;
     left: 10px;
     color: darkred;
     font-size: xx-large;
@@ -19,7 +22,6 @@ h1 {
 }
 
 h3 {
-    position: relative;
     left: 3px;
     color: darkred;
     font-size: x-large;
@@ -29,20 +31,17 @@ h3 {
 }
 
 .info {
-    position: relative;
     left: 1px;
     font-size: medium;
 }
 
 #secretMessage {
-    position: relative;
     text-align: left;
-    color: peachpuff;
+    color: #ffdac8;
     font-size: xx-small;
 }
 
 #secreterMessage {
-    position: relative;
     text-align: right;
     color: #ffdfb9;
     font-size: xx-small;
@@ -50,8 +49,8 @@ h3 {
 
 #credits {
     position: absolute;
-    top: 15px;
-    right: 17px;
+    top: 5px;
+    right: 7px;
     font-size: smaller;
     font-style: italic;
     color: darkred;
